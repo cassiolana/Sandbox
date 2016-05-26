@@ -1,0 +1,17 @@
+language: java
+
+script: mvn clean package heroku:deploy-war
+
+jdk:
+  - oraclejdk8
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
+env:
+  global:
+    # sets the HEROKU_API_KEY for deploys
+    # travis encrypt HEROKU_API_KEY=<heroku auth:token>
+    - secure: "Q/ub+0rry5DH7iBa5dCLzn8TJPzELCh9+Ewn4kdvIU9FfiD6Xf+e47i4rkqXZHaNSkEMeNqiSj34G0ydUhSa5f88EhRJ0HamuZG8Pw+gXdlWdnQIqhOdpztjNdeEL8pLjH37cuY9UmK424Qq5ANDavAhfgb9PstMVBqSGf0zy7k4B3/U28eW8m+tKfjBh0tofA51Uk/5duM3n/55awlCfJW8/pCbPq9OW7bWBuv9oE9Ms5WH/4E2XHvs2j4GvETMjBfIJvYGPbKNaWDXrGDR2aGFcATOvuSjG/4ttgjfX2oTZM/o3plF6JisqquqtzwtJ4TY9nEbYqAHgh1bFZl3DEA6ChmFFSWqmatPsHpFYj2dKsTF6Iu2X1qF++8t7EHuTrv3JuoWevO1qu++VGiSIe6fNUDo2lPxLM/vAxmE9Z/Po7DI7IwYeOGiH5uu1msumOJ8wnNikUCAV7nxcpvQgk9TLvJHiyvu1RCClVgHsTrt4WB+ihzzFx8aR1bPouMIWwakll5JZ/p9bEMowLLJ+YrWw3Cv+QuR+6JAFI7zBrHu3UoNobDeqP4tF5UZo7hmGB7JuUxHR3ffqSVXxWRSlgTRXAFKXASiNcXvupge/cgOx83+byld49WzDeeMWeHbEcaJMhHNF7ApkqRmK2kcF+qQMfVVo7Ceu6bVPVThLNs="
