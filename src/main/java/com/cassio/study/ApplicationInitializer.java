@@ -23,7 +23,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
 
     private AnnotationConfigWebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-        ctx.setConfigLocation("com.ciandt.hackathon.bitcoin.roulette");
+        ctx.setConfigLocation("com.cassio.study");
         ctx.register(ApplicationConfig.class);
         return ctx;
     }	

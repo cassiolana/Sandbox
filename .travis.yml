@@ -1,14 +1,8 @@
 language: java
-script: mvn clean package heroku:deploy-war
-jdk:
-- oraclejdk8
-addons:
-  apt:
-    packages:
-    - oracle-java8-installer
+script: mvn clean package
+jdk: oraclejdk8
 deploy:
   provider: heroku
   app: cassio-sandbox
   api_key:
     secure: eE/lJM3apLXNEQ14+kXJ3JR/YySiamyf7kaSdN6t+lEycsuOl8mT+Ok1eM7LJL++zsssaxTm6t2+cL1VY1Sidg+s6tC1gdh9fnHtmizbyb9cUY137665ERZ4UG4t++jIoBIGgn5gsS0wh8z9MScTaH1LV0nuEqWdmM0H6sYmE8EKODLtPPNKKVWFHdkIOcYHceA6cnR2uvsv5zeFhOLCfkyo0vd37z1C/Nh2nxUO14kKptJJLIpJ5ZY/guZroguDBwGtjiKXhHPCBynvDM7NTbgYXYIuwv61DcKobLTZo78M940w9JS01v89/R9gT7BMZdjmwxdhUmWx+LmzsWsDPYN5GZN7n23EwxyEu9RGwJefgMYDGD5bdrpGsGNXB3kyJnD8Aoz0/0bg2a0BoWJqCsqM2rpN2pXn7H5iPtbCo1wW3fb0YebwwtbjYYG98gKA+0BI5MLC2ttjSAQ8U30pUOGRl5kjMoijHeVv/K4sHK1IhL49n6dlyi2gqKcH09J7R8auelIb6qQCQzmljsk7RoSCX/9RpMBLLStmtgjKUJD6ICBXPU/uplcS7i4BxH+is3DXxgghLUqv651f3YBE+RH2XQVZ/pMNcFQyWX3DXKK53Ut9LIkenHnDKNzukUvSVNnDh363TRY0fXCCGQSByxgNZ7/bzKFSE3SQeYW+lKA=
-

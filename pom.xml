@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.version>4.2.6.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
@@ -74,7 +74,7 @@
 								<artifactItem>
 									<groupId>com.github.jsimone</groupId>
 									<artifactId>webapp-runner</artifactId>
-									<version>8.0.24.0</version>
+									<version>8.0.33.0</version>
 									<destFileName>webapp-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>
@@ -86,7 +86,7 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<version>0.4.4</version>
+				<version>1.0.3</version>
 				<configuration>
 					<appName>cassio-sandbox</appName>
 				</configuration>
