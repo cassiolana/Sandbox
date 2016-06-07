@@ -1,14 +1,20 @@
 package com.cassio.study.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class InfoService {
+	
+	Logger logger = LoggerFactory.getLogger(InfoService.class);
+	
 	@Autowired
 	private Environment env;
 	
@@ -30,5 +36,12 @@ public class InfoService {
         sb.append("Data do build: %s");
         
         return String.format(sb.toString(), version, buildDate);
+    }
+	
+	@RequestMapping("/index")
+    public String index(Model model) {
+		model.addAttribute("version", env.getProperty("version"));
+		model.addAttribute("buildDate", env.getProperty("build.date"));
+        return "index";
     }
 }
