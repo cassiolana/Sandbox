@@ -31,6 +31,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
 		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
 		registry.addResourceHandler("/img/**").addResourceLocations("/img/");
+		registry.addResourceHandler("/*.ico").addResourceLocations("/img/");
 	}
 
 	@Bean
@@ -57,5 +58,5 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
 		resolver.setCharacterEncoding("UTF-8");
 		return resolver;
 	}
-
+	
 }
